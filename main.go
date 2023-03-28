@@ -2,6 +2,7 @@ package main
 
 import (
 	"app/src/database"
+	helper "app/src/helpers"
 	"app/src/middleware"
 	"app/src/routes"
 	"github.com/gin-contrib/sessions"
@@ -33,7 +34,10 @@ func init() {
 	}
 }
 func main() {
-	//helper.Log.Printf("Server v%s pid=%d started with processes: %d", VERSION, )
+	helper.Log.Printf("Server v%s pid=%d started with processes: %d", VERSION)
 	r := setupRouter()
-	r.Run(":" + os.Getenv("PORT"))
+	err := r.Run(":" + os.Getenv("PORT"))
+	if err != nil {
+		return
+	}
 }

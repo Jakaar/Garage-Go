@@ -7,13 +7,13 @@
     Developed by Jakaar
 </p>
 
-# SMS APP Admin Service v0.0.1-ийн тухай.
-`1.`Тус SMS App-ийн Admin service нь GoLang хэл дээр бичэгдсэн. [Go Үзэх](https://go.dev/). <br>
+# Garage Go v0.0.1.
+`1.`Garage Go Admin service нь GoLang хэл дээр бичэгдсэн. [Go Үзэх](https://go.dev/). <br>
 `2.`Мөн Gin gonic Framework ашиглаж хийгдсэн [Gin Gonic Үзэх](https://gin-gonic.com/).
 
 
 
-## SMS App Admin Service ийг Development орчинд асаах.
+## Garage Go Admin Service ийг Development орчинд асаах.
 ### 1.  Requirement
 
     1. Go 1.19.2 Xамгийн багадаа.
@@ -34,11 +34,10 @@ $ go get
 $ cp .env.dev .env
 
 # 2-р Алхам localhost:8080 
-$ go run ./main.go
+$ go run main.go
 
 # Production болсон үед
 $ go build -tags=jsoniter main.go
-$ ./main
 ```
 [localhost:8080](http://localhost:8080) дээр асна.
 
